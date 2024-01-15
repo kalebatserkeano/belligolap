@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,8 +39,10 @@ class start : Fragment() {
         val view =  inflater.inflate(R.layout.fragment_start, container, false)
 
         //find the button and set its onclick
-        view.findViewById<Button>(R.id.landing_btn_start).setOnClickListener {
+        view.findViewById<Button>(R.id.menuknop).setOnClickListener {
             //Use the navigation tree in the current view to navigate to the next page
-            Navigation.findNavController(view).navigate(R.id.action_landing_to_signup)
+            Navigation.findNavController(view).navigate(R.id.action_start2_to_menu)
+        }
+        return view
     }
 }
