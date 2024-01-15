@@ -45,4 +45,5 @@ class start : Fragment() {
         }
         return view
     }
+
 }
