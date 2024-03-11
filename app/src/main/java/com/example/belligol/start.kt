@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +24,8 @@ class start : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    var currentscore = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +47,14 @@ class start : Fragment() {
             //Use the navigation tree in the current view to navigate to the next page
             Navigation.findNavController(view).navigate(R.id.action_start2_to_menu)
         }
+
+        view.findViewById<ImageButton>(R.id.belligol).setOnClickListener {
+            currentscore++
+            view.findViewById<TextView>(R.id.Goals).text = currentscore.toString()
+
+        }
+
+
         return view
     }
 
